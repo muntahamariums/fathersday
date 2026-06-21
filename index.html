@@ -1,0 +1,72 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Father's Day, Baba!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="timeline-header">
+        <h1>Happy Father's Day, Baba!</h1>
+        <p>A small walk down memory lane. Click each milestone to reveal the moment.</p>
+    </header>
+
+    <div class="timeline-container">
+        <div class="timeline-line"></div>
+
+        <!-- Milestone 1 -->
+        <div class="timeline-item">
+            <div class="timeline-badge">1</div>
+            <div class="timeline-content">
+                <span class="date">The Early Years</span>
+                <h2>Thank you for setting the foundation...</h2>
+                
+                <!-- Everything inside this div stays hidden until clicked -->
+                <div class="reveal-container hidden">
+                    <p class="memory-text">Whether it was teaching me how things work, helping me figure out tricky problems, or just making me laugh with classic dad humor, thank you for always being my anchor.</p>
+                    <img src="memory1.jpg" alt="Early memory with Dad" class="timeline-img">
+                </div>
+                
+                <button class="reveal-btn">Click to Reveal</button>
+            </div>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="timeline-item">
+            <div class="timeline-badge">2</div>
+            <div class="timeline-content">
+                <span class="date">A Favorite Memory</span>
+                <h2>Childhood memories..</h2>
+                
+                <div class="reveal-container hidden">
+                    <p class="memory-text"> I still think about this whenever I need a quick smile.</p>
+                    <img src="memory4.jpg" alt="A funny memory" class="timeline-img">
+                </div>
+                
+                <button class="reveal-btn">Click to Reveal</button>
+            </div>
+        </div>
+
+        <!-- Milestone 3 -->
+        <div class="timeline-item">
+            <div class="timeline-badge">3</div>
+            <div class="timeline-content">
+                <span class="date">Today & Beyond</span>
+                <h2>To my favorite advisor, mentor, and friend</h2>
+                
+                <div class="reveal-container hidden">
+                    <p class="memory-text">Thank you for encouraging my passions, keeping me grounded, and always believing in where I'm going next. I'm so incredibly incredibly lucky to have you. Happy Father's Day!</p>
+                    <img src="memory8.jpg" alt="Recent picture with Dad" class="timeline-img">
+                </div>
+                
+                <button class="reveal-btn">Click to Reveal</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

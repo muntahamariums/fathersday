@@ -1,0 +1,174 @@
+CSS
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #8ECCB6;
+    color: #163127;
+    padding: 50px 20px;
+    line-height: 1.6;
+}
+
+.timeline-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.timeline-header h1 {
+    color: #CEE9DF;
+    font-size: 2.6rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.timeline-header p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Central spine line */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #B3D6CB;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    margin-bottom: 40px;
+}
+
+/* Alternating layout left vs right side */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+    text-align: left;
+}
+
+/* Central numbered nodes */
+.timeline-badge {
+    position: absolute;
+    top: 22px;
+    right: -22px;
+    width: 44px;
+    height: 44px;
+    background: #2C5047;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 44px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    z-index: 10;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+.timeline-item:nth-child(even) .timeline-badge {
+    left: -22px;
+}
+
+/* Cards */
+.timeline-content {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-2px);
+}
+
+.date {
+    display: block;
+    color: #1FB28B;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 1.25rem;
+    color: #2C5046;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Hidden containers and animation elements */
+.reveal-container {
+    transition: opacity 0.6s ease-in-out, transform 0.4s ease-out;
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.reveal-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden {
+    display: none;
+}
+
+.memory-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: left; /* Keeps text reading naturally even on the right-side cards */
+}
+
+/* Image formatting */
+.timeline-img {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-top: 5px;
+}
+
+/* Interactive Button */
+.reveal-btn {
+    background-color: #188B68;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.reveal-btn:hover {
+    background-color: #188B68;
+}
+
+.reveal-btn:active {
+    transform: scale(0.98);
